@@ -1,14 +1,22 @@
 import React from "react";
+import NavbarHeader from "@/components/Navbar/NavbarHeader";
+import NavbarLink from "@/components/Navbar/NavbarLink";
 
-type NavbarProps = {
-  children: React.ReactNode;
-};
-
-const Navbar: React.FC<NavbarProps> = ({ children }) => {
+const Navbar = () => {
   return (
-    <nav className="px-[80px] py-[30px] flex items-center justify-between">
-      {children}
-    </nav>
+    <>
+      <section>
+        <NavbarHeader text={"Collers"} />
+      </section>
+      <section className="flex items-center justify-center gap-[16px]">
+        {["Products", "Solutions", "Pricing", "Resources", "Log In"].map(
+          (item, index) => (
+            <NavbarLink text={item} variant={"default"} key={index} />
+          ),
+        )}
+        <NavbarLink text={"Sign Up Now"} variant={"signUp"} />
+      </section>
+    </>
   );
 };
 
