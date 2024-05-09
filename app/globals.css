@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #FFFBEC;
+  color: #0F172A;
+}
+
+.hero {
+  background-image: url("../assets/HeroBackground.png") ;
+}
+
+.nike {
+  animation: nikeAnimation 750ms ease-in-out 750ms infinite alternate;
+}
+
+@keyframes nikeAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
