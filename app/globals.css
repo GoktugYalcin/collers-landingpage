@@ -9,7 +9,10 @@ body {
 }
 
 .hero {
-  background-image: url("../assets/HeroBackground.png") ;
+  background-image: url("../assets/HeroBackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 40px !important;
 }
 
 .nike {

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import NavbarHeader from "@/components/Navbar/NavbarHeader";
 import NavbarLink from "@/components/Navbar/NavbarLink";
 
 import WatchIcon from "@/assets/heroWatchIcon.svg";
 import NikeFootwear from "@/assets/nikeFootwear.svg";
+import BelowHeroFirst from "@/assets/BelowHeroFirst.svg";
 
 export default function Home() {
   return (
@@ -23,8 +23,8 @@ export default function Home() {
           <NavbarLink text={"Sign Up Now"} variant={"signUp"} />
         </section>
       </Navbar>
-      <section className="flex flex-col justify-start items-center">
-        <div className="flex justify-center items-start gap-[100px] p-[80px]">
+      <section className="hero flex flex-col justify-start items-start w-full">
+        <div className="flex justify-between items-start w-full p-[80px]">
           {/*@TODO: buraya bg gelecek*/}
           <section className="flex flex-col w-1/2">
             <span className="text-[72px] font-extrabold">
@@ -49,6 +49,23 @@ export default function Home() {
               alt={"Yellow Nike footwear with rounded square background"}
               className="animate-bounce nike"
             />
+          </section>
+        </div>
+        <div className="flex items-center justify-between gap-[80px] p-[80px]">
+          <section className="flex flex-col gap-[16px] w-1/5">
+            <Image src={BelowHeroFirst} alt={"Below hero first"} />
+            <span className="text-[20px] font-[500]">Nibh viverra</span>
+            <span className="text-[18px]">Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.</span>
+          </section>
+          <section className="flex flex-col gap-[16px] w-1/5">
+            <Image src={BelowHeroFirst} alt={"Below hero first"} />
+            <span className="text-[20px] font-[500]">Nibh viverra</span>
+            <span className="text-[18px]">Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.</span>
+          </section>
+          <section className="flex flex-col gap-[16px] w-1/5">
+            <Image src={BelowHeroFirst} alt={"Below hero first"} />
+            <span className="text-[20px] font-[500]">Nibh viverra</span>
+            <span className="text-[18px]">Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.</span>
           </section>
         </div>
       </section>
