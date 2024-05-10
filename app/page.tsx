@@ -9,6 +9,7 @@ import DecoVideo from "@/components/DecoVideo";
 import SwipeLand from "@/components/SwipeLand";
 import Branding from "@/components/Branding";
 import Chart from "@/components/Chart";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
       <SwipeLand />
       <Branding />
       <Chart />
-      <footer className=""></footer>
+      <Footer />
     </main>
   );
 }
