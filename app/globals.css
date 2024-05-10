@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar { display: none; }
 
 body {
   background-color: #FFFBEC;
@@ -24,6 +25,20 @@ body {
   background-position: center;
 }
 
+.waves {
+  background-image: url("../assets/Waves.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+
+.chart {
+  background-image: url("../assets/ChartBack.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #79350F;
+}
+
 .nike {
   animation: nikeAnimation 1.2s ease-in-out 1.2s infinite alternate;
 }
@@ -43,8 +58,6 @@ body {
 .swiper-button-disabled{
   display:none;
 }
-
-::-webkit-scrollbar { display: none; }
 
 @keyframes nikeAnimation {
   0% {

@@ -7,6 +7,8 @@ import NavbarWrapper from "@/components/Navbar/NavbarWrapper";
 import Backlights from "@/components/Backlights";
 import DecoVideo from "@/components/DecoVideo";
 import SwipeLand from "@/components/SwipeLand";
+import Branding from "@/components/Branding";
+import Chart from "@/components/Chart";
 
 export default function Home() {
   return (
@@ -20,6 +22,9 @@ export default function Home() {
       <Backlights />
       <DecoVideo />
       <SwipeLand />
+      <Branding />
+      <Chart />
+      <footer className=""></footer>
     </main>
   );
 }

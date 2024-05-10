@@ -2,33 +2,30 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import LeftButton from "@/assets/LeftButton.svg";
-import RightButton from "@/assets/RightButton.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
+import LeftButton from "@/assets/LeftButton.svg";
+import RightButton from "@/assets/RightButton.svg";
 
 import Logo1 from "@/assets/Logo1.svg";
 import Logo2 from "@/assets/Logo2.svg";
 import Logo3 from "@/assets/Logo3.svg";
 import Logo4 from "@/assets/Logo4.svg";
 import Logo5 from "@/assets/Logo5.svg";
-import Logo6 from "@/assets/Logo6.svg";
-import Logo7 from "@/assets/Logo7.svg";
 
 import User1 from "@/assets/User1.svg";
 import User2 from "@/assets/User2.svg";
 import User3 from "@/assets/User3.svg";
 import User4 from "@/assets/User4.svg";
 import User5 from "@/assets/User5.svg";
-import User6 from "@/assets/User6.svg";
-import User7 from "@/assets/User7.svg";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const Index = () => {
+const SwipeLand = () => {
   const swiperRef = useRef<any>();
   return (
     <section className="w-full flex flex-col justify-center items-center bg-[#FFFDF4] pb-[80px]">
@@ -55,7 +52,6 @@ const Index = () => {
         spaceBetween={20}
         slidesPerView={4.2}
         scrollbar={false}
-        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -169,4 +165,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default SwipeLand;
