@@ -6,6 +6,7 @@ import HeroWrapper from "@/components/Hero/HeroWrapper";
 import NavbarWrapper from "@/components/Navbar/NavbarWrapper";
 import Backlights from "@/components/Backlights";
 import DecoVideo from "@/components/DecoVideo";
+import SwipeLand from "@/components/SwipeLand";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </HeroWrapper>
       <Backlights />
       <DecoVideo />
+      <SwipeLand />
     </main>
   );
 }
