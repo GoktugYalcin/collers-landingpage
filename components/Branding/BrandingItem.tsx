@@ -15,7 +15,7 @@ const BrandingItem: React.FC<BrandingItemProps> = ({
   title,
   onClick,
 }) => {
-  const itemClasses = `p-[16px] flex justify-start items-center gap-[16px] cursor-pointer rounded-[8px] transition-colors ${selected ? "bg-white" : ""}`;
+  const itemClasses = `p-[16px] flex justify-start min-w-[240px] items-center gap-[16px] cursor-pointer rounded-[8px] transition-colors ${selected ? "bg-white" : ""}`;
   return (
     <li className={itemClasses} onClick={onClick}>
       <Image src={icon} alt={"icon"} />
