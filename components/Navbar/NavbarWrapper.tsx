@@ -6,7 +6,7 @@ type NavbarWrapperProps = {
 
 const NavbarWrapper: React.FC<NavbarWrapperProps> = ({ children }) => {
   return (
-    <nav className="px-[80px] py-[30px] flex items-center justify-between">
+    <nav className="lg:px-[80px] px-[16px] lg:py-[30px] py-[22px] flex items-center justify-between">
       {children}
     </nav>
   );

@@ -7,7 +7,7 @@ import WatchIcon from "@/assets/heroWatchIcon.svg";
 
 const HeroBottom = () => {
   return (
-    <div className="flex justify-start items-center gap-[16px]">
+    <div className="flex lg:justify-start justify-center items-center gap-[16px]">
       <NavbarLink text={"Sign up now"} variant={"signUp"} />
       <div className="cursor-pointer flex justify-between items-center gap-[8px] px-[8px] py-[12px] text-[#78350F]">
         <Image src={WatchIcon} alt={"Play Icon"} />

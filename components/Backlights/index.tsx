@@ -26,16 +26,19 @@ const Backlights = () => {
       desc: "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
     },
   ];
+
   return (
-    <section className="backlights bg-[#0F172A] p-[80px] gap-[80px] flex flex-col">
-      <div className="text-white flex w-full justify-between items-center">
-        <h2 className="font-extrabold text-[56px]">The best of the best</h2>
+    <section className="backlights bg-[#0F172A] lg:p-[80px] px-[16px] py-[48px] gap-[80px] flex flex-col">
+      <div className="text-white flex lg:flex-row flex-col w-full lg:gap-0 gap-[32px] justify-between items-center">
+        <h2 className="font-extrabold lg:text-[56px] text-[32px]">
+          The best of the best
+        </h2>
         <span className="px-[48px] py-[20px] font-bold text-[24px] rounded-[12px] border-[2px] border-white">
           Sign up now
         </span>
       </div>
 
-      <div className="flex justify-between items-center gap-[48px]">
+      <div className="flex lg:flex-row flex-col justify-between items-center gap-[48px]">
         {backlightsItems.map((item, index) => (
           <BacklightItem {...item} key={index} />
         ))}

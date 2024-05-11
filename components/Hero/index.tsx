@@ -15,8 +15,8 @@ import SubHero from "@/components/Hero/SubHero";
 const Hero = () => {
   return (
     <section className="hero flex flex-col justify-start items-start w-full">
-      <div className="flex justify-between items-start w-full p-[80px]">
-        <section className="flex flex-col w-1/2">
+      <div className="flex lg:flex-row flex-col justify-between lg:items-start items-center w-full lg:px-[80px] px-[16px] py-[48px]">
+        <section className="flex flex-col lg:w-1/2 w-full">
           <HeroTitle title={"Collectible Sneakers"} />
           <HeroDesc
             desc={
@@ -29,7 +29,7 @@ const Hero = () => {
           <Image
             src={NikeFootwear}
             alt={"Yellow Nike footwear with rounded square background"}
-            className="animate-bounce nike"
+            className="animate-bounce nike lg:mt-0 mt-[80px]"
           />
         </section>
       </div>

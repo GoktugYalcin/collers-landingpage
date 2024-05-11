@@ -6,7 +6,7 @@ type SubHeroProps = {
 
 const SubHero: React.FC<SubHeroProps> = ({ children }) => {
   return (
-    <div className="flex items-center justify-between gap-[80px] p-[80px]">
+    <div className="flex lg:flex-row flex-col items-center justify-between lg:gap-[80px] gap-[32px] lg:p-[80px] px-[16px] py-[48px]">
       {children}
     </div>
   );

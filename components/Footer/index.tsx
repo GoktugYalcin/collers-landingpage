@@ -52,10 +52,10 @@ const Footer = () => {
           <span>Terms</span>
           <span>Privacy</span>
           <span>Contact</span>
-          <span className="flex items-center">
+          {/*<span className="flex items-center">
             <Image src={World} alt={"World"} className="mr-[6px]" />
             EN
-          </span>
+          </span>*/}
         </div>
       </div>
     </footer>
