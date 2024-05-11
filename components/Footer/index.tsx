@@ -5,57 +5,66 @@ import AppStore from "@/assets/AppStore.svg";
 import GooglePlay from "@/assets/GooglePlay.svg";
 import SocialIcons from "@/assets/SocialIcons.svg";
 import World from "@/assets/world.svg";
+import FooterLinkSection from "@/components/Footer/FooterLinkSection";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#10172A] flex flex-col pt-[48px] px-[80px] text-white text-[16px] gap-[50px]">
-      <div className="flex justify-between items-start">
-        <div className="w-1/4 flex flex-col justify-start items-start gap-[24px]">
-          <span className="font-medium">Product</span>
-          <span>Pricing</span>
-          <span>Overview</span>
-          <span>Browse</span>
-          <span>Accessibility</span>
-          <span>Five</span>
-        </div>
-        <div className="w-1/4 flex flex-col justify-start items-start gap-[24px]">
-          <span className="font-medium">Solutions</span>
-          <span>Brainstorming</span>
-          <span>Ideation</span>
-          <span>Wireframing</span>
-          <span>Research</span>
-          <span>Design</span>
-        </div>
-        <div className="w-1/4 flex flex-col justify-start items-start gap-[24px]">
-          <span className="font-medium">Support</span>
-          <span>Contact Us</span>
-          <span>Developers</span>
-          <span>Documentation</span>
-          <span>Integrations</span>
-          <span>Reports</span>
-        </div>
-        <div className="w-1/4 flex flex-col justify-between items-start gap-[70px]">
-          <div className="flex flex-col justify-start items-start">
-            <span className="font-medium mb-[20px]">Get the App</span>
+      <div className="flex lg:flex-row flex-col justify-between lg:items-start items-center lg:gap-0 gap-[80px]">
+        <FooterLinkSection
+          title="Product"
+          items={["Pricing", "Overview", "Browse", "Accessibility", "Five"]}
+        />
+        <FooterLinkSection
+          title="Solutions"
+          items={[
+            "Brainstorming",
+            "Ideation",
+            "Wireframing",
+            "Research",
+            "Design",
+          ]}
+        />
+        <FooterLinkSection
+          title="Support"
+          items={[
+            "Contact Us",
+            "Developers",
+            "Documentation",
+            "Integrations",
+            "Reports",
+          ]}
+        />
+        <div className="lg:w-1/4 flex flex-col justify-between lg:items-start items-center lg:gap-[70px] gap-[80px]">
+          <div className="flex flex-col justify-start lg:items-start items-center">
+            <span className="font-medium lg:mb-[20px] mb-[12px]">
+              Get the App
+            </span>
             <Image src={AppStore} alt={"App Store"} className="mb-[8px]" />
             <Image src={GooglePlay} alt={"Google Play"} />
           </div>
-          <div className="flex flex-col justify-start items-start">
+          <div className="flex flex-col justify-start lg:items-start items-center">
             <span className="font-medium mb-[20px]">Follow Us</span>
-            <Image src={SocialIcons} alt={"Social Icons"} />
+            <Image
+              src={SocialIcons}
+              alt={"Social Icons"}
+              className="lg:ml-0 ml-[90px]"
+            />
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center py-[37px] border-t border-[#2F3C50]">
-        <span>Collers @ 2023. All rights reserved.</span>
-        <div className="flex justify-start items-center gap-[32px]">
+      <div className="flex lg:flex-row flex-col justify-between items-center lg:py-[37px] pt-[48px] border-t border-[#2F3C50]">
+        <span className="lg:pb-0 pb-[24px]">
+          Collers @ 2023. All rights reserved.
+        </span>
+        <div className="flex justify-start items-center gap-[32px] lg:pb-0 pb-[48px]">
           <span>Terms</span>
           <span>Privacy</span>
           <span>Contact</span>
-          {/*<span className="flex items-center">
+          <span className="flex items-center">
             <Image src={World} alt={"World"} className="mr-[6px]" />
             EN
-          </span>*/}
+          </span>
         </div>
       </div>
     </footer>
