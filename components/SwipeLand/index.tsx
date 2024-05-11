@@ -24,15 +24,70 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import SwipeCard, { SwipeCardProps } from "@/components/SwipeLand/SwipeCard";
 
 const SwipeLand = () => {
   const swiperRef = useRef<any>();
+  const swipeCards: SwipeCardProps[] = [
+    {
+      logo: Logo1,
+      title: "Zoomerr",
+      desc: "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
+      user: {
+        photo: User1,
+        name: "Hellen Jummy",
+        title: "Team Lead",
+      },
+    },
+    {
+      logo: Logo2,
+      title: "SHELLS",
+      desc: "Amet morbi enim sodales quis dui, in habitant pharetra. Risus id fringilla sed adipiscing volutpat sit varius turpis. Sed pretium se.",
+      user: {
+        photo: User2,
+        name: "Hellena John",
+        title: "Co-founder",
+      },
+    },
+    {
+      logo: Logo3,
+      title: "ArtVenue",
+      desc: "A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a lacus. Pretium vehicula pretium posuere justo sed.",
+      user: {
+        photo: User3,
+        name: "David Oshodi",
+        title: "Manager",
+      },
+    },
+    {
+      logo: Logo4,
+      title: "WAVES",
+      desc: "Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet aenean metus nibh eu scelerisque.",
+      user: {
+        photo: User4,
+        name: "Charolette Hanlin",
+        title: "CEO",
+      },
+    },
+    {
+      logo: Logo5,
+      title: "kontrastr",
+      desc: "Amet morbi enim sodales quis dui, in habitant pharetra. Risus id fringilla sed adipiscing volutpat sit varius turpis. Sed pretium se.",
+      user: {
+        photo: User5,
+        name: "Ralph Edwards",
+        title: "Product Designer",
+      },
+    },
+  ];
   return (
     <section className="w-full flex flex-col justify-center items-center bg-[#FFFDF4] pb-[80px]">
       <div className="slider" />
-      <div className="w-full flex justify-between p-[80px] items-center">
-        <h2 className="text-[56px] font-extrabold">Because they love us</h2>
-        <div className="flex justify-center items-center gap-[24px]">
+      <div className="w-full flex lg:justify-between justify-center lg:p-[80px] px-[16px] py-[48px] items-center">
+        <h2 className="lg:text-[56px] text-[32px] font-extrabold">
+          Because they love us
+        </h2>
+        <div className="lg:flex hidden justify-center items-center gap-[24px]">
           <Image
             src={LeftButton}
             alt={"Left Button"}
@@ -50,115 +105,45 @@ const SwipeLand = () => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
-        slidesPerView={4.2}
         scrollbar={false}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         initialSlide={3}
         className="w-full"
+        effect="fade"
+        fadeEffect={{
+          crossFade: true,
+        }}
         centeredSlides={true}
         centeredSlidesBounds={true}
         centerInsufficientSlides={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 480px
+          760: {
+            slidesPerView: 4.2,
+            spaceBetween: 90,
+          },
+        }}
       >
         <SwiperSlide className="flex justify-center items-center mr-0">
-          <div className="w-[384px] rounded-[20px] bg-white  pt-[48px] pb-[32px] px-[32px] flex flex-col justify-between items-start shadow-lg">
-            <span className="flex justify-start items-center gap-[8px] py-[16px] text-[24px] text-[#475569] font-bold">
-              <Image src={Logo1} alt={"Logo"} />
-              Zoomerr
-            </span>
-            <span className="text-[24px] space-y-2">
-              Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus,
-              viverra turpis lorem. Varius a turpis urna id porttitor.
-            </span>
-            <div className="flex justify-start items-center gap-[16px] mt-[32px]">
-              <Image src={User1} alt={"User photo"} />
-              <div className="flex flex-col justify-start items-start">
-                <span className="text-[18px]">Hellen Jummy</span>
-                <span className="text-[16px] text-[#475569]">Team Lead</span>
-              </div>
-            </div>
-          </div>
+          <SwipeCard {...swipeCards[0]} />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center mr-0">
-          <div className="w-[384px] rounded-[20px] bg-white  pt-[48px] pb-[32px] px-[32px] flex flex-col justify-between items-start shadow-lg">
-            <span className="flex justify-start items-center gap-[8px] py-[16px] text-[24px] text-[#475569] font-bold">
-              <Image src={Logo2} alt={"Logo"} />
-              SHELLS
-            </span>
-            <span className="text-[24px] space-y-2">
-              Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet
-              enim. Sit purus venenatis velit semper lectus sed ornare quam
-              nulla.
-            </span>
-            <div className="flex justify-start items-center gap-[16px] mt-[32px]">
-              <Image src={User2} alt={"User photo"} />
-              <div className="flex flex-col justify-start items-start">
-                <span className="text-[18px]">Hellena John</span>
-                <span className="text-[16px] text-[#475569]">Co-founder</span>
-              </div>
-            </div>
-          </div>
+          <SwipeCard {...swipeCards[1]} />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center mr-0">
-          <div className="w-[384px] rounded-[20px] bg-white  pt-[48px] pb-[32px] px-[32px] flex flex-col justify-between items-start shadow-lg">
-            <span className="flex justify-start items-center gap-[8px] py-[16px] text-[24px] text-[#475569] font-bold">
-              <Image src={Logo3} alt={"Logo"} />
-              ArtVenue
-            </span>
-            <span className="text-[24px] space-y-2">
-              A eget sed posuere dui risus habitasse mauris. Venenatis aliquet
-              id ultrices a lacus. Pretium vehicula pretium posuere justo sed.
-            </span>
-            <div className="flex justify-start items-center gap-[16px] mt-[32px]">
-              <Image src={User3} alt={"User photo"} />
-              <div className="flex flex-col justify-start items-start">
-                <span className="text-[18px]">David Oshodi</span>
-                <span className="text-[16px] text-[#475569]">Manager</span>
-              </div>
-            </div>
-          </div>
+          <SwipeCard {...swipeCards[2]} />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center mr-0">
-          <div className="w-[384px] rounded-[20px] bg-white  pt-[48px] pb-[32px] px-[32px] flex flex-col justify-between items-start shadow-lg">
-            <span className="flex justify-start items-center gap-[8px] py-[16px] text-[24px] text-[#475569] font-bold">
-              <Image src={Logo4} alt={"Logo"} />
-              WAVES
-            </span>
-            <span className="text-[24px] space-y-2">
-              Magna egestas aliquet ut integer non. Sed diam enim nibh sit.
-              Aliquam laoreet aenean metus nibh eu scelerisque.
-            </span>
-            <div className="flex justify-start items-center gap-[16px] mt-[32px]">
-              <Image src={User4} alt={"User photo"} />
-              <div className="flex flex-col justify-start items-start">
-                <span className="text-[18px]">Charolette Hanlin</span>
-                <span className="text-[16px] text-[#475569]">CEO</span>
-              </div>
-            </div>
-          </div>
+          <SwipeCard {...swipeCards[3]} />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center mr-0">
-          <div className="w-[384px] rounded-[20px] bg-white  pt-[48px] pb-[32px] px-[32px] flex flex-col justify-between items-start shadow-lg">
-            <span className="flex justify-start items-center gap-[8px] py-[16px] text-[24px] text-[#475569] font-bold">
-              <Image src={Logo5} alt={"Logo"} />
-              kontrastr
-            </span>
-            <span className="text-[24px] space-y-2">
-              Amet morbi enim sodales quis dui, in habitant pharetra. Risus id
-              fringilla sed adipiscing volutpat sit varius turpis. Sed pretium
-              se.
-            </span>
-            <div className="flex justify-start items-center gap-[16px] mt-[32px]">
-              <Image src={User5} alt={"User photo"} />
-              <div className="flex flex-col justify-start items-start">
-                <span className="text-[18px]">Ralph Edwards</span>
-                <span className="text-[16px] text-[#475569]">
-                  Product Designer
-                </span>
-              </div>
-            </div>
-          </div>
+          <SwipeCard {...swipeCards[4]} />
         </SwiperSlide>
       </Swiper>
     </section>
