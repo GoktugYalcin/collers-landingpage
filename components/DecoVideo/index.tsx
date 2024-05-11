@@ -21,7 +21,7 @@ const DecoVideo = () => {
               <DecovideoListItem desc={item} key={index} />
             ))}
           </ul>
-          <NavbarLink text={"Sign Up Now"} variant={"signUp"} />
+          <NavbarLink text={"Sign up now"} variant={"signUp"} />
         </div>
         <div className="lg:absolute lg:right-12">
           <Image

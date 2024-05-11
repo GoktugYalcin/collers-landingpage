@@ -21,7 +21,7 @@ const Navbar = () => {
             <NavbarLink text={item} variant={"default"} key={index} />
           ),
         )}
-        <NavbarLink text={"Sign Up Now"} variant={"signUp"} />
+        <NavbarLink text={"Sign up now"} variant={"signUp"} />
       </section>
       <section className="lg:hidden">
         <Image

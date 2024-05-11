@@ -11,7 +11,7 @@ const HeroBottom = () => {
       <NavbarLink text={"Sign up now"} variant={"signUp"} />
       <div className="cursor-pointer flex justify-between items-center gap-[8px] px-[8px] py-[12px] text-[#78350F]">
         <Image src={WatchIcon} alt={"Play Icon"} />
-        <span>Watch Now</span>
+        <span>Watch Demo</span>
       </div>
     </div>
   );

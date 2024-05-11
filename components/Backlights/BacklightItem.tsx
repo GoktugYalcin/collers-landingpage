@@ -15,7 +15,7 @@ const BacklightItem: React.FC<BacklightsItemProps> = ({
   desc,
 }) => {
   return (
-    <div className="flex flex-col justify-center items-center shadow-md shadow-white w-[380px] rounded-[10px] overflow-hidden">
+    <div className="backlight-item flex flex-col justify-center items-center shadow-md shadow-white w-[380px] rounded-[10px] overflow-hidden">
       <Image src={image} alt={"Best Item"} />
       <div className="flex flex-col p-[32px] bg-[#0F172A] text-white">
         <span className="font-bold text-[24px] pb-[16px]">{title}</span>
