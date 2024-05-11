@@ -7,7 +7,7 @@ import DecovideoListItem from "@/components/DecoVideo/DecovideoListItem";
 const DecoVideo = () => {
   return (
     <section className="bg-[#FFFDF4] lg:px-[80px] lg:py-[160px] p-[16px] pb-[56px] lg:overflow-visible overflow-hidden">
-      <div className="shadow flex lg:flex-row flex-col justify-between items-center bg-white overflow-visible lg:px-[80px] lg:py-[110px] p-[16px] pt-[32px]">
+      <div className="shadow flex lg:flex-row flex-col justify-between radius-[30px] items-center bg-white overflow-visible lg:px-[80px] lg:py-[110px] p-[16px] pt-[32px]">
         <div className="flex flex-col gap-[24px] justify-center lg:items-start items-center">
           <h1 className="font-extrabold lg:text-[56px] text-[32px]">
             Why join us

@@ -120,10 +120,9 @@ const SwipeLand = () => {
         centerInsufficientSlides={true}
         breakpoints={{
           320: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
             spaceBetween: 30,
           },
-          // when window width is >= 480px
           760: {
             slidesPerView: 4.2,
             spaceBetween: 90,

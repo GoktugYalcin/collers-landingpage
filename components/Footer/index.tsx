@@ -9,7 +9,7 @@ import FooterLinkSection from "@/components/Footer/FooterLinkSection";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#10172A] flex flex-col pt-[48px] px-[80px] text-white text-[16px] gap-[50px]">
+    <footer className="w-full bg-[#10172A] flex flex-col pt-[48px] lg:px-[80px] px-[45px] text-white text-[16px] gap-[50px]">
       <div className="flex lg:flex-row flex-col justify-between lg:items-start items-center lg:gap-0 gap-[80px]">
         <FooterLinkSection
           title="Product"
@@ -61,10 +61,10 @@ const Footer = () => {
           <span>Terms</span>
           <span>Privacy</span>
           <span>Contact</span>
-          <span className="flex items-center">
+          <div className="flex items-center justify-center">
             <Image src={World} alt={"World"} className="mr-[6px]" />
-            EN
-          </span>
+            <span>EN</span>
+          </div>
         </div>
       </div>
     </footer>

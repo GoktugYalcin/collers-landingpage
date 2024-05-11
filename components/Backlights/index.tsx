@@ -38,7 +38,7 @@ const Backlights = () => {
         </span>
       </div>
 
-      <div className="flex lg:flex-row flex-col justify-between items-center gap-[48px]">
+      <div className="flex lg:flex-row flex-col justify-evenly items-center gap-[48px]">
         {backlightsItems.map((item, index) => (
           <BacklightItem {...item} key={index} />
         ))}
