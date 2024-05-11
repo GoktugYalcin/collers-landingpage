@@ -1,6 +1,5 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import BestFirst from "@/assets/BestFirst.png";
 import CartIcon from "@/assets/CartIcon.svg";
 
 export type BacklightsItemProps = {
